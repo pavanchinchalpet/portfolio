@@ -39,17 +39,16 @@ export default function Portfolio() {
               decoding="async"
             />
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-black" style={{ fontFamily: 'var(--font-manrope)' }}>
-              Hi, I'm Pavan Kumar 👋
+              Hi, I'm Pavan Kumar Chinchalpet
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">
-              Crafting seamless web experiences with modern technologies
+              Full Stack Web Developer crafting high-performance, scalable applications
             </p>
             <p className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-gray-700 px-4">
-              Aspiring Full Stack Web Developer with a strong foundation in software development and web technologies. 
-              Experienced in working on team-based projects involving deep learning and privacy-focused applications, 
-              with active involvement in data collection and presentation. Recognized for problem-solving, adaptability, 
-              and communication skills. Focused on building secure, high-performance applications that align with 
-              organizational goals and user needs.
+              Full Stack Web Developer with extensive experience in architecting, developing, and deploying high-performance, 
+              scalable, and user-centric web applications. Proven expertise in designing robust backend systems, building 
+              responsive and dynamic frontends, and ensuring seamless integration across the full technology stack. 
+              Skilled in performance optimization, clean architecture, and delivering reliable, production-ready solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -70,16 +69,17 @@ export default function Portfolio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
             About Me
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-lg leading-relaxed mb-6">
-                I am an enthusiastic and self-driven Computer Science Engineer (B.Tech – CSE, 2023) with a keen interest
-                in Web Development, Cloud Computing, and System Design.
+                I am a passionate Full Stack Web Developer with extensive experience in architecting, developing, and 
+                deploying high-performance, scalable, and user-centric web applications. I specialize in designing 
+                robust backend systems and building responsive, dynamic frontends.
               </p>
               <p className="text-lg leading-relaxed mb-8">
-                I enjoy learning new technologies, experimenting with innovative ideas, and working on projects that
-                create real impact. Apart from coding, I love reading books, writing stories, playing sports, and
-                exploring creative ideas.
+                With proven expertise in performance optimization, clean architecture, and delivering reliable, 
+                production-ready solutions, I'm passionate about driving technical excellence and delivering 
+                impactful digital products that exceed user and business expectations.
               </p>
 
               <div className="space-y-3">
@@ -110,7 +110,7 @@ export default function Portfolio() {
                 <div>
                   <h4 className="font-semibold mb-2 text-primary">🌐 Frontend</h4>
                   <div className="flex flex-wrap gap-2">
-                    {["HTML", "CSS", "JavaScript (ES6+)", "React.js", "Redux", "Bootstrap", "Tailwind CSS"].map((skill) => (
+                    {["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js", "Next.js"].map((skill) => (
                       <span key={skill} className="badge badge-secondary">
                         {skill}
                       </span>
@@ -121,7 +121,7 @@ export default function Portfolio() {
                 <div>
                   <h4 className="font-semibold mb-2 text-primary">⚙️ Backend</h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Express.js", "RESTful API", "GraphQL"].map((skill) => (
+                    {["Node.js", "Express.js", "Nest.js", "RESTful API", "GraphQL"].map((skill) => (
                       <span key={skill} className="badge badge-secondary">
                         {skill}
                       </span>
@@ -167,40 +167,45 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Internship Experience */}
+      {/* Professional Experience */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
-            Internship Experience
+            Professional Experience
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="card">
               <div className="card-header">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="card-title text-xl mb-2" style={{ fontFamily: 'var(--font-manrope)' }}>Full Stack Web Developer</h3>
+                    <h3 className="card-title text-xl mb-2" style={{ fontFamily: 'var(--font-manrope)' }}>Full Stack Web Developer Intern</h3>
                     <p className="card-description text-lg">Datavalley.ai</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      <a href="https://crm.datavalley.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        CRM System
+                      </a>
+                    </p>
                   </div>
-                  <span className="badge badge-secondary ml-4">May 2025 - Present</span>
+                  <span className="badge badge-secondary ml-4">Jun 2025 - Present</span>
                 </div>
               </div>
               <div className="card-content">
                 <ul className="space-y-3 text-sm leading-relaxed">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Gained hands-on experience in building and deploying web applications.</span>
+                    <span>Developed and optimized UI components in Next.js, including the User Management and Manage Registration Fields modules, ensuring responsive design, usability, and efficient handling of student registration data.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Refined RESTful API architectures and worked on integrating third-party services.</span>
+                    <span>Implemented OTP-based email authentication using Nodemailer (SMTP method), enhancing security and ensuring reliable user login and verification.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Collaborated with team members to enhance user experience and meet project objectives.</span>
+                    <span>Designed and integrated dynamic email templates within the Nest.js backend, ensuring consistent communication and branding.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Improved understanding of scalable application design and problem-solving in real-world scenarios.</span>
+                    <span>Integrated GraphQL APIs between Next.js and Nest.js, enabling seamless data exchange and improving overall system performance and scalability.</span>
                   </li>
                 </ul>
               </div>
@@ -215,31 +220,47 @@ export default function Portfolio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
             Featured Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             <ProjectCard
-              emoji="🏢"
-              title="CRM System"
-              description="Developed a role-based CRM system for student-faculty interaction and academic management, ensuring secure and structured data handling."
-              type="Full-Stack Project"
-              technologies={["React.js", "Node.js", "GraphQL", "JWT Auth"]}
+              emoji="🎓"
+              title="MERN Quest - Learning Platform"
+              description="Developed a full-stack quiz platform using the MERN stack with Supabase integration, interactive assessments, and real-time progress tracking."
+              type="Full-Stack Learning Platform"
+              technologies={["React.js", "Node.js", "MongoDB", "Supabase", "JWT Auth"]}
               features={[
-                "Implemented secure login authentication with role-based access control",
-                "Designed modules for admissions, academics, and analytics",
-                "Features: announcements, assignment uploads, attendance tracking"
+                "Designed optimized PostgreSQL schemas and integrated JWT authentication",
+                "Built scalable admin dashboard and responsive React frontend",
+                "Implemented quiz management, scoring systems, and gamification features"
               ]}
+              projectUrl="https://learn-mern-pied.vercel.app/"
             />
 
             <ProjectCard
-              emoji="🚦"
-              title="Road Sign Intimation System"
-              description="Built a real-time road sign detection and classification system using deep learning models, achieving 90% accuracy in low-visibility conditions."
-              type="Deep Learning Project"
-              technologies={["Deep Learning", "Computer Vision", "Voice Alerts"]}
+              emoji="🏥"
+              title="Healthcare Management System"
+              description="Developed a full-stack healthcare management platform using modern web technologies, achieving sub-second load times and zero layout shift across all pages."
+              type="Full-Stack Healthcare Platform"
+              technologies={["React.js", "GraphQL", "PostgreSQL", "Apollo Client"]}
               features={[
-                "Integrated voice alert functionality for immediate notifications",
-                "Optimized deep learning models through rigorous training",
-                "Collaborated in data collection and presentation"
+                "Optimized performance through GraphQL query tuning and database connection pooling",
+                "Reduced load time from 3.72s to under 0.5s",
+                "Implemented production-ready features like skeleton loading and responsive UI"
               ]}
+              projectUrl="https://healthcare-eight-bay.vercel.app/"
+            />
+
+            <ProjectCard
+              emoji="🏢"
+              title="CRM System"
+              description="Developed and optimized UI components in Next.js for the User Management and Manage Registration Fields modules, ensuring responsive design and efficient data handling."
+              type="Professional Project"
+              technologies={["Next.js", "Nest.js", "GraphQL", "Nodemailer"]}
+              features={[
+                "Implemented OTP-based email authentication using Nodemailer",
+                "Designed and integrated dynamic email templates",
+                "Integrated GraphQL APIs for seamless data exchange"
+              ]}
+              projectUrl="https://crm.datavalley.ai/"
             />
           </div>
         </div>
@@ -251,7 +272,7 @@ export default function Portfolio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
             Education & Achievements
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Education */}
             <div>
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-2" style={{ fontFamily: 'var(--font-manrope)' }}>
@@ -261,26 +282,18 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <EducationCard
                   icon={GraduationCap}
-                  title="B.Tech in Computer Science Engineering"
-                  institution="Annamacharya Institute of Technology and Sciences, Hyderabad"
+                  title="Bachelor of Technology in Computer Science Engineering"
+                  institution="Annamacharya Institute of Technology and Sciences"
                   period="Aug 2019 - Nov 2023"
                   grade="70%"
                 />
 
                 <EducationCard
                   icon={BookOpen}
-                  title="Intermediate"
-                  institution="Narayana Junior College, Hyderabad"
+                  title="Intermediate (Mathematics, Physics, Chemistry)"
+                  institution="Narayana Junior College"
                   period="Jun 2017 - Mar 2019"
                   grade="87%"
-                />
-
-                <EducationCard
-                  icon={BookOpen}
-                  title="SSC"
-                  institution="St. Anthony's High School, Vikarabad"
-                  period="2017"
-                  grade="8.0 CGPA"
                 />
               </div>
             </div>
@@ -354,7 +367,7 @@ export default function Portfolio() {
           <p className="text-xl mb-12 text-gray-600">
             Ready to collaborate on your next project? Let's build something amazing together!
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <ContactCard
               icon={Mail}
               title="Email"
@@ -377,7 +390,7 @@ export default function Portfolio() {
             <ContactCard
               icon={Linkedin}
               title="LinkedIn"
-              subtitle="linkedin.com/in/pavanchinchalpet"
+              subtitle="Linkedin.com/in/pavanchinchalpet"
               href="https://linkedin.com/in/pavanchinchalpet"
               isExternal={true}
             />

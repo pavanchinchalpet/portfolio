@@ -20,7 +20,7 @@ const EducationCard: React.FC<EducationCardProps> = React.memo(({
     <div className="card">
       <div className="card-content pt-6">
         <div className="flex items-start gap-4">
-          <div className="bg-primary rounded-lg p-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
+          <div className="bg-primary rounded-lg p-2" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
             <Icon className="h-5 w-5 text-primary" />
           </div>
           <div className="flex-1">
