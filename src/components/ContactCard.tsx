@@ -28,8 +28,8 @@ const ContactCard: React.FC<ContactCardProps> = React.memo(({
     >
       <div className="card-content pt-6 text-center">
         <Icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-        <p className="text-sm font-medium text-black">{title}</p>
-        <p className="text-xs text-gray-600">{subtitle}</p>
+        <p className="text-sm font-medium text-foreground">{title}</p>
+        <p className="text-xs text-muted-foreground">{subtitle}</p>
       </div>
     </a>
   );

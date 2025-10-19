@@ -12,44 +12,32 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: var(--background);
+  color: var(--foreground);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Color Variables */
+/* Color Variables - Dark Theme */
 :root {
   --font-manrope: 'Manrope', sans-serif;
-  --primary: #000000;
-  --primary-dark: #333333;
-  --secondary: #666666;
-  --background: #ffffff;
-  --foreground: #000000;
-  --muted: #f8f9fa;
-  --muted-foreground: #6c757d;
-  --border: #e9ecef;
-  --card: #ffffff;
-  --card-foreground: #000000;
-  --accent: #f8f9fa;
-  --radius: 0.5rem;
-}
-
-/* Dark mode */
-.dark {
-  --background: #000000;
+  --primary: #ffffff;
+  --primary-dark: #e5e5e5;
+  --secondary: #a3a3a3;
+  --background: #0a0a0a;
   --foreground: #ffffff;
   --muted: #1a1a1a;
-  --muted-foreground: #cccccc;
-  --border: #333333;
-  --card: #1a1a1a;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --card: #111111;
   --card-foreground: #ffffff;
-  --accent: #333333;
+  --accent: #1a1a1a;
+  --radius: 0.5rem;
 }
 
 /* Utility Classes */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -186,6 +174,10 @@ body {
   gap: 3rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -196,6 +188,10 @@ body {
 
 .border {
   border: 1px solid var(--border);
+}
+
+.border-primary {
+  border-color: var(--primary);
 }
 
 .border-2 {
@@ -239,15 +235,15 @@ body {
 }
 
 .text-gray-600 {
-  color: #6b7280;
+  color: #a3a3a3;
 }
 
 .text-gray-700 {
-  color: #374151;
+  color: #d4d4d8;
 }
 
 .text-black {
-  color: #000000;
+  color: #ffffff;
 }
 
 .flex {
@@ -260,6 +256,10 @@ body {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -290,6 +290,18 @@ body {
   flex: 1 1 0%;
 }
 
+.min-w-0 {
+  min-width: 0;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .space-y-2 > * + * {
   margin-top: 0.5rem;
 }
@@ -311,15 +323,15 @@ body {
 }
 
 .max-w-3xl {
-  max-width: 48rem;
+  max-width: 60rem;
 }
 
 .max-w-4xl {
-  max-width: 56rem;
+  max-width: 80rem;
 }
 
 .max-w-6xl {
-  max-width: 72rem;
+  max-width: 100rem;
 }
 
 .w-32 {
@@ -572,8 +584,13 @@ body {
     padding-right: 1.5rem;
   }
   
-  .max-w-4xl,
+  .max-w-4xl {
+    max-width: 90%;
+    padding: 0 1.5rem;
+  }
+  
   .max-w-6xl {
+    max-width: 95%;
     padding: 0 1.5rem;
   }
 }
@@ -582,6 +599,10 @@ body {
 @media (min-width: 640px) {
   .sm\:flex-row {
     flex-direction: row;
+  }
+  
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   
   .py-20 {
@@ -594,11 +615,11 @@ body {
   }
   
   .max-w-4xl {
-    max-width: 42rem;
+    max-width: 50rem;
   }
   
   .max-w-6xl {
-    max-width: 60rem;
+    max-width: 70rem;
   }
 }
 
@@ -648,13 +669,67 @@ body {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  
+  .max-w-4xl {
+    max-width: 60rem;
+  }
+  
+  .max-w-6xl {
+    max-width: 80rem;
+  }
 }
 
 /* Extra large screens (1280px+) */
 @media (min-width: 1280px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
   .px-4 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  
+  .max-w-4xl {
+    max-width: 70rem;
+  }
+  
+  .max-w-6xl {
+    max-width: 90rem;
+  }
+}
+
+/* Ultra wide screens (1600px+) */
+@media (min-width: 1600px) {
+  .px-4 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .max-w-4xl {
+    max-width: 80rem;
+  }
+  
+  .max-w-6xl {
+    max-width: 100rem;
+  }
+  
+  /* Better spacing for ultra-wide screens */
+  .py-20 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  .gap-12 {
+    gap: 5rem;
+  }
+  
+  .gap-8 {
+    gap: 3rem;
   }
 }
 
@@ -768,6 +843,17 @@ body {
   .text-lg {
     font-size: 1.125rem;
     line-height: 1.7;
+  }
+  
+  /* Better section spacing */
+  .py-20 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  /* Improve content spacing */
+  .gap-12 {
+    gap: 4rem;
   }
 }
 
