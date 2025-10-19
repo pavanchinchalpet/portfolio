@@ -5,7 +5,7 @@ import "../../styles/globals.css"
 export const metadata: Metadata = {
   title: "Pavan Kumar Chinchalpet - Full Stack Developer",
   description:
-    "Portfolio of Pavan Kumar Chinchalpet, a passionate Full Stack Developer with expertise in Java, JavaScript, React.js, Next.js, and Cloud Computing.",
+    "Portfolio of Pavan Kumar Chinchalpet, a Full Stack Web Developer with extensive experience in architecting, developing, and deploying high-performance, scalable web applications using React.js, Next.js, Node.js, and modern technologies.",
   generator: "v0.app",
 }
 
