@@ -1,450 +1,697 @@
-import React from 'react';
+import React from "react";
 import {
   Mail,
   Phone,
-  MapPin,
   Github,
   Linkedin,
   ExternalLink,
-  Calendar,
-  GraduationCap,
-  Trophy,
   BookOpen,
-  Gamepad2,
-  PenTool,
-  Mic,
-  Award,
-  Code2,
 } from "lucide-react";
-import ContactCard from '../../components/ContactCard';
-import ProjectCard from '../../components/ProjectCard';
-import EducationCard from '../../components/EducationCard';
-import CertificateCard from '../../components/CertificateCard';
+import ContactCard from "../../components/ContactCard";
+import ProjectCard from "../../components/ProjectCard";
 
 export default function Portfolio() {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--background)' }}>
-      {/* Hero Section */}
-      <section id="home" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <img
-              src="/images/passport size photo.jpg"
-              alt="Pavan Kumar Chinchalpet"
-              className="w-32 h-32 mx-auto mb-6 border-4 border-black"
-              style={{ 
-                borderColor: 'rgba(0, 0, 0, 0.3)',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                imageRendering: 'crisp-edges'
-              }}
-              loading="lazy"
-              decoding="async"
-            />
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-black" style={{ fontFamily: 'var(--font-manrope)' }}>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* ================= HERO SECTION ================= */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center px-4 md:px-8"
+      >
+        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT CONTENT */}
+          <div className="space-y-6">
+            <p className="text-sm md:text-base text-blue-400 font-medium">
               Hi, I'm Pavan Kumar Chinchalpet
+            </p>
+
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold leading-snug tracking-tight gradient-text max-w-xl">
+              Full-Stack Developer building high-performance, scalable web applications
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-600">
-              Full Stack Web Developer crafting high-performance, scalable applications
+
+            <p className="text-base md:text-lg text-gray-300 max-w-lg">
+              Architecting enterprise-grade systems with optimized APIs, scalable architecture, and production-ready deployments.
             </p>
-            <p className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-gray-700 px-4">
-              Full Stack Web Developer with extensive experience in architecting, developing, and deploying high-performance, 
-              scalable, and user-centric web applications. Proven expertise in designing robust backend systems, building 
-              responsive and dynamic frontends, and ensuring seamless integration across the full technology stack. 
-              Skilled in performance optimization, clean architecture, and delivering reliable, production-ready solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:pavanchinchalpet@gmail.com"
-                className="btn btn-lg btn-secondary font-semibold"
+
+            {/* BADGES */}
+            <div className="flex flex-wrap gap-2">
+              <span className="skill-badge badge-blue">🚀 500+ Users</span>
+              <span className="skill-badge badge-green">⚡ 3.7s → 0.5s</span>
+              <span className="skill-badge badge-purple">📊 70% Load Reduction</span>
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a href="#projects" className="btn btn-secondary">
+                <ExternalLink className="h-4 w-4 mr-2" />
+                View Projects
+              </a>
+              <a
+                href="/pavan-chinchalpet.pdf"
+                target="_blank"
+                className="btn btn-outline"
+                rel="noopener noreferrer"
               >
-                <Mail className="mr-2 h-5 w-5" />
-                Get In Touch
+                <BookOpen className="h-4 w-4 mr-2" />
+                Resume
+              </a>
+              <a
+                href="mailto:pavanchinchalpet@gmail.com"
+                className="btn btn-outline"
+              >
+                <Mail className="h-4 w-4 mr-2" />
+                Contact
               </a>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
-            About Me
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-lg leading-relaxed mb-6">
-                I am a passionate Full Stack Web Developer with extensive experience in architecting, developing, and 
-                deploying high-performance, scalable, and user-centric web applications. I specialize in designing 
-                robust backend systems and building responsive, dynamic frontends.
-              </p>
-              <p className="text-lg leading-relaxed mb-8">
-                With proven expertise in performance optimization, clean architecture, and delivering reliable, 
-                production-ready solutions, I'm passionate about driving technical excellence and delivering 
-                impactful digital products that exceed user and business expectations.
-              </p>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  <span>
-                    <strong>Date of Birth:</strong> 17th June 2001
-                  </span>
+            {/* STATS */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-xl">
+              {[
+                ["500+", "Users"],
+                ["70%", "Load Reduced"],
+                ["0.5s", "API Time"],
+                ["1+", "Years"],
+              ].map(([value, label]) => (
+                <div
+                  key={label}
+                  className="glass-effect rounded-lg p-3 text-center"
+                >
+                  <div className="text-lg font-semibold text-blue-400">{value}</div>
+                  <div className="text-xs text-gray-400">{label}</div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>
-                    <strong>Location:</strong> Hyderabad, Telangana, India
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">🗣️</span>
-                  <span>
-                    <strong>Languages:</strong> English, Telugu, Hindi
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-manrope)' }}>Technical Skills</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">🌐 Languages</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["JavaScript", "TypeScript", "Python", "Java"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">🎨 Frontend</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js", "Next.js"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">⚙️ Backend</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Express.js", "Nest.js", "RESTful API", "GraphQL API"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">🗄️ Database</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["NoSQL", "SQL", "PostgreSQL"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">🛠️ Tools & Platforms</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Git", "GitHub", "Postman", "npm", "VS Code", "Vercel", "Render"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">🔐 Others</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["JWT Authentication", "API Integration", "Responsive Design", "Deployment", "Debugging & Testing"].map((skill) => (
-                      <span key={skill} className="badge badge-secondary">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-[260px] sm:w-[300px] md:w-[340px]">
+              <img
+                src="/images/passport size photo.jpg"
+                alt="Pavan Kumar"
+                className="rounded-full border-4 border-blue-400 shadow-2xl object-cover w-full aspect-square"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Professional Experience */}
-      <section id="experience" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
-            Professional Experience
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-16">
-              {/* CRM System */}
-              <div className="card">
-                <div className="card-header">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="card-title text-xl mb-2" style={{ fontFamily: 'var(--font-manrope)' }}>CRM System</h3>
-                      <p className="card-description text-lg">Datavalley.ai</p>
+      {/* ================= ABOUT ================= */}
+      <section id="about" className="py-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title">About Me</h2>
+        
+        {/* About Description */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8">
+I’m a Full-Stack Developer specializing in building high-performance, scalable web applications that solve real-world problems. I have hands-on experience architecting and delivering production-ready systems, from robust backend APIs to clean, responsive frontends.
+
+My work focuses on performance optimization, scalable system design, and clean architecture. I’ve improved application load times from seconds to sub-second responses, reduced database load through effective caching strategies, and built systems capable of handling hundreds of concurrent users reliably.
+
+I’m passionate about writing maintainable code, designing efficient data flows, and building systems that are not only functional, but stable, secure, and easy to evolve. I enjoy working across the entire stack and collaborating closely with teams to deliver digital products that meet both technical excellence and business goals.
+</p>          
+          {/* Personal Info */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="glass-effect rounded-lg p-4 text-center">
+              <div className="text-sm text-gray-400 mb-1">Date of Birth</div>
+              <div className="text-blue-400 font-medium">17th June 2001</div>
+            </div>
+            <div className="glass-effect rounded-lg p-4 text-center">
+              <div className="text-sm text-gray-400 mb-1">Location</div>
+              <div className="text-blue-400 font-medium">Hyderabad, Telangana, India</div>
+            </div>
+            <div className="glass-effect rounded-lg p-4 text-center">
+              <div className="text-sm text-gray-400 mb-1">🗣️ Languages</div>
+              <div className="text-blue-400 font-medium">English, Telugu, Hindi</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technical Skills */}
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-2xl font-semibold text-center mb-12 gradient-text">Technical Skills</h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Languages */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">🌐 Languages</h4>
+              <div className="flex flex-wrap gap-2">
+                {["JavaScript", "TypeScript", "Python", "Java"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-blue">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Frontend */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-green-400">🎨 Frontend</h4>
+              <div className="flex flex-wrap gap-2">
+                {["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js", "Next.js"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-green">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Backend */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-purple-400">⚙️ Backend</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Node.js", "Express.js", "Nest.js"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-purple">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Database */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-yellow-400">🗄️ Database</h4>
+              <div className="flex flex-wrap gap-2">
+                {["NoSQL", "SQL", "PostgreSQL", "MongoDB", "SupabaseDB", "NeonDB"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-yellow">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Platforms */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-cyan-400">🛠️ Tools & Platforms</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Git", "GitHub", "Postman", "npm", "VS Code", "Vercel", "Render"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-cyan">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Others */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-red-400">🔐 Others</h4>
+              <div className="flex flex-wrap gap-2">
+                {["JWT Authentication", "API Integration", "Responsive Design", "Deployment", "Debugging & Testing"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-red">{skill}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      {/* ================= EXPERIENCE ================= */}
+      <section id="experience" className="py-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title">Professional Experience</h2>
+        
+        <div className="max-w-4xl mx-auto">
+          {/* Company Header */}
+          <div className="glass-effect rounded-lg p-8 mb-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">Full Stack Developer</h3>
+                <p className="text-lg text-gray-300">Datavalley.ai</p>
+              </div>
+              <div className="text-sm text-gray-400 mt-2 md:mt-0">
+                Current Position
+              </div>
+            </div>
+            
+            {/* Projects */}
+            <div className="space-y-8">
+              
+              {/* LMS Project */}
+              <div className="border-l-4 border-blue-400 pl-6">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-white mb-2">Learning Management System (LMS)</h4>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "Wasabi S3"].map((tech) => (
+                        <span key={tech} className="skill-badge badge-blue text-xs">{tech}</span>
+                      ))}
                     </div>
-                    <a 
-                      href="https://crm.datavalley.ai/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-dark transition-colors flex-shrink-0 ml-2"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
                   </div>
+                  <a 
+                    href="https://learning.datavalley.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 mt-2 lg:mt-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
                 </div>
-                <div className="card-content">
-                  <ul className="space-y-3 text-sm leading-relaxed">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Developed and optimized UI components in Next.js, including the User Management and Manage Registration Fields modules, ensuring responsive design, usability, and efficient handling of student registration data.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Implemented OTP-based email authentication using Nodemailer (SMTP method), enhancing security and ensuring reliable user login and verification.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Designed and integrated dynamic email templates within the Nest.js backend, ensuring consistent communication and branding.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Integrated GraphQL APIs between Next.js and Nest.js, enabling seamless data exchange and improving overall system performance and scalability.</span>
-                    </li>
-                  </ul>
-                </div>
+                
+                <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                  <li>• Architected and deployed a scalable LMS platform with secure multi-role management, high-concurrency handling, and JWT authentication for 500+ users</li>
+                  <li>• Implemented automated workflows for video streaming, course management, daily assessments, and realtime coding challenges using Judge0 API and OpenAI-powered adaptive quiz feedback</li>
+                  <li>• Built analytics dashboards in Next.js/Tailwind for trainers and admins to track progress, quiz performance, and learning metrics; added bulk upload features for grades and assets</li>
+                  <li>• Achieved sub-second API responses by integrating Redis caching and database indexing; enabled scalable media delivery using Wasabi S3 and automated CI/CD on Vercel and Render</li>
+                  <li>• Ensured production stability through proactive error handling, health checks, and fast rollback routines, enabling uninterrupted releases and continuous feature updates</li>
+                </ul>
               </div>
-              <br />
 
-              {/* Certificate Generator */}
-              <div className="card">
-                <div className="card-header">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="card-title text-xl mb-2" style={{ fontFamily: 'var(--font-manrope)' }}>Datavalley Certificate Generator</h3>
-                      <p className="card-description text-lg">Datavalley.ai</p>
+              {/* CRM Project */}
+              <div className="border-l-4 border-green-400 pl-6">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-white mb-2">CRM Application</h4>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {["Next.js", "React", "TypeScript", "Tailwind CSS", "Apollo Server", "NestJS", "Node.js", "PostgreSQL", "JWT", "Git"].map((tech) => (
+                        <span key={tech} className="skill-badge badge-green text-xs">{tech}</span>
+                      ))}
                     </div>
-                    <a 
-                      href="https://datavalley-certificate.vercel.app/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-dark transition-colors flex-shrink-0 ml-2"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
+                  </div>
+                  <a 
+                    href="https://crm.datavalley.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1 mt-2 lg:mt-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </div>
+                
+                <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                  <li>• Built a scalable CRM using Next.js and NestJS (TypeScript) with a modular architecture (Controller, Service, Repository) managing entities, workflows, and user permissions</li>
+                  <li>• Implemented OTP email login using Nodemailer and secure JWT-based authentication with RBAC via NestJS Guards</li>
+                  <li>• Designed relational database models in PostgreSQL (Neon) for Leads, Contacts, and Organizations, and developed clean REST & GraphQL APIs</li>
+                  <li>• Improved API performance through Postgres indexing and in-memory caching; optimized frontend data fetching using TanStack Query</li>
+                  <li>• Developed responsive Next.js UI components and added bulk CSV/Excel upload with custom validation and real-time status updates</li>
+                </ul>
+              </div>
+
+              {/* Certificate Generator Project */}
+              <div className="border-l-4 border-purple-400 pl-6">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-white mb-2">Certificate Generator</h4>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {["React", "CSV/Excel Processing", "PDF Generation", "QR Codes", "Cloud Storage"].map((tech) => (
+                        <span key={tech} className="skill-badge badge-purple text-xs">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <a 
+                    href="https://datavalley-certificate.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 mt-2 lg:mt-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </div>
+                
+                <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                  <li>• Built a scalable certificate automation engine that processes CSV/Excel files in React, featuring real-time validation, error handling, and batch PDF generation for educational institutions</li>
+                  <li>• Created a robust verification system supporting both Certificate ID and Student Roll Number searches, connecting QR codes to secure database lookups for instant authenticity validation</li>
+                  <li>• Engineered a multi-template PDF system with dynamic image insertion (college logos, signatures) across different certificate types, delivering branded documents through optimized cloud storage and download workflows</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      {/* ================= PROJECTS ================= */}
+      <section id="projects" className="py-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title">Personal Projects</h2>
+        
+        <div className="max-w-5xl mx-auto space-y-8">
+          
+          {/* MERN Quest Project */}
+          <div className="glass-effect rounded-lg p-8">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex items-start gap-4 flex-1">
+                <span className="text-4xl">🎓</span>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-2">MERN Quest</h3>
+                  <p className="text-lg text-gray-300 mb-3">Full-Stack Learning Platform</p>
+                  <p className="text-gray-400 mb-4">Learning platform with quizzes, JWT auth, and analytics.</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {["React", "Node", "MongoDB", "Supabase"].map((tech) => (
+                      <span key={tech} className="skill-badge badge-blue text-xs">{tech}</span>
+                    ))}
                   </div>
                 </div>
-                <div className="card-content">
-                  <ul className="space-y-3 text-sm leading-relaxed">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Built a scalable certificate automation engine that processes CSV/Excel files in React, featuring real-time validation, error handling, and batch PDF generation for educational institutions.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Created a robust verification system supporting both Certificate ID and Student Roll Number searches, connecting QR codes to secure database lookups for instant authenticity validation.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span>Engineered a multi-template PDF system with dynamic image insertion (college logos, signatures) across different certificate types, delivering branded documents through optimized cloud storage and download workflows.</span>
-                    </li>
-                  </ul>
+              </div>
+              <a 
+                href="https://learn-mern-pied.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Live Demo
+              </a>
+            </div>
+            
+            <div className="border-l-4 border-blue-400 pl-6">
+              <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+              <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                <li>• Interactive quiz system with real-time scoring</li>
+                <li>• JWT authentication and user management</li>
+                <li>• Analytics dashboard for progress tracking</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Healthcare Platform Project */}
+          <div className="glass-effect rounded-lg p-8">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex items-start gap-4 flex-1">
+                <span className="text-4xl">🏥</span>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-green-400 mb-2">Healthcare Platform</h3>
+                  <p className="text-lg text-gray-300 mb-3">Full-Stack Healthcare Platform</p>
+                  <p className="text-gray-400 mb-4">Sub-second healthcare system using GraphQL + PostgreSQL.</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {["React", "GraphQL", "PostgreSQL"].map((tech) => (
+                      <span key={tech} className="skill-badge badge-green text-xs">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://healthcare-eight-bay.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Live Demo
+              </a>
+            </div>
+            
+            <div className="border-l-4 border-green-400 pl-6">
+              <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+              <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                <li>• GraphQL API with optimized queries</li>
+                <li>• Sub-second response times</li>
+                <li>• Scalable PostgreSQL database design</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* IoT Asset Dashboard Project */}
+          <div className="glass-effect rounded-lg p-8">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex items-start gap-4 flex-1">
+                <span className="text-4xl">⚙️</span>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-purple-400 mb-2">IoT Asset Dashboard</h3>
+                  <p className="text-lg text-gray-300 mb-3">Full-Stack IoT Platform</p>
+                  <p className="text-gray-400 mb-4">Real-time IoT monitoring with WebSockets.</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {["Next.js", "Socket.io", "PostgreSQL"].map((tech) => (
+                      <span key={tech} className="skill-badge badge-purple text-xs">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://iot-asset.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Live Demo
+              </a>
+            </div>
+            
+            <div className="border-l-4 border-purple-400 pl-6">
+              <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+              <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
+                <li>• Real-time device monitoring</li>
+                <li>• WebSocket communication</li>
+                <li>• Interactive data visualization</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </section>
+
+      {/* ================= EDUCATION & ACHIEVEMENTS ================= */}
+      <section id="education" className="py-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title">Education & Achievements</h2>
+        
+        <div className="max-w-5xl mx-auto space-y-8">
+          
+          {/* Education Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-center mb-8 gradient-text">Education</h3>
+            
+            <div className="space-y-6">
+              {/* Bachelor's Degree */}
+              <div className="glass-effect rounded-lg p-8">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex items-start gap-4 flex-1">
+                    <span className="text-4xl">🎓</span>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-blue-400 mb-2">Bachelor of Technology in Computer Science Engineering</h4>
+                      <p className="text-lg text-gray-300 mb-2">Annamacharya Institute of Technology and Sciences</p>
+                      <p className="text-gray-400 text-sm">Aug 2019 - Nov 2023</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 lg:mt-0">
+                    <span className="skill-badge badge-blue">70%</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Intermediate */}
+              <div className="glass-effect rounded-lg p-8">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex items-start gap-4 flex-1">
+                    <span className="text-4xl">📚</span>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-green-400 mb-2">Intermediate (Mathematics, Physics, Chemistry)</h4>
+                      <p className="text-lg text-gray-300 mb-2">Narayana Junior College</p>
+                      <p className="text-gray-400 text-sm">Jun 2017 - Mar 2019</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 lg:mt-0">
+                    <span className="skill-badge badge-green">87%</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
-            Featured Projects
-          </h2>
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            <ProjectCard
-              emoji="🎓"
-              title="MERN Quest - Learning Platform"
-              description="Developed a full-stack quiz platform using the MERN stack with Supabase integration, interactive assessments, and real-time progress tracking."
-              type="Full-Stack Learning Platform"
-              technologies={["React.js", "Node.js", "MongoDB", "Supabase", "JWT Auth"]}
-              features={[
-                "Designed optimized PostgreSQL schemas and integrated JWT authentication",
-                "Built scalable admin dashboard and responsive React frontend",
-                "Implemented quiz management, scoring systems, and gamification features"
-              ]}
-              projectUrl="https://learn-mern-pied.vercel.app/"
-            />
-
-            <ProjectCard
-              emoji="🏥"
-              title="Healthcare Management System"
-              description="Implemented a high-performance healthcare management platform using modern web technologies, ensuring sub-second load times and zero layout shift across all pages."
-              type="Full-Stack Healthcare Platform"
-              technologies={["React.js", "GraphQL", "PostgreSQL", "Apollo Client"]}
-              features={[
-                "Optimized performance through GraphQL query tuning, database connection pooling, and Apollo Client caching",
-                "Reduced load time from 3.72s to under 0.5s",
-                "Implemented production-ready features like skeleton loading, responsive UI, and seamless data flow"
-              ]}
-              projectUrl="https://healthcare-eight-bay.vercel.app/"
-            />
-
-            <ProjectCard
-              emoji="🏢"
-              title="CRM System"
-              description="Developed and optimized UI components in Next.js for the User Management and Manage Registration Fields modules, ensuring responsive design and efficient data handling."
-              type="Professional Project"
-              technologies={["Next.js", "Nest.js", "GraphQL", "Nodemailer"]}
-              features={[
-                "Implemented OTP-based email authentication using Nodemailer",
-                "Designed and integrated dynamic email templates",
-                "Integrated GraphQL APIs for seamless data exchange"
-              ]}
-              projectUrl="https://crm.datavalley.ai/"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Education & Achievements */}
-      <section id="education" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" style={{ fontFamily: 'var(--font-manrope)' }}>
-            Education & Achievements
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Education */}
-            <div>
-              <h3 className="text-2xl font-bold mb-8 flex items-center gap-2" style={{ fontFamily: 'var(--font-manrope)' }}>
-                <GraduationCap className="h-6 w-6 text-primary" />
-                Education
-              </h3>
-              <div className="space-y-6">
-                <EducationCard
-                  icon={GraduationCap}
-                  title="Bachelor of Technology in Computer Science Engineering"
-                  institution="Annamacharya Institute of Technology and Sciences"
-                  period="Aug 2019 - Nov 2023"
-                  grade="70%"
-                />
-
-                <EducationCard
-                  icon={BookOpen}
-                  title="Intermediate (Mathematics, Physics, Chemistry)"
-                  institution="Narayana Junior College"
-                  period="Jun 2017 - Mar 2019"
-                  grade="87%"
-                />
+          {/* Certificates Section */}
+          <div>
+            <h3 className="text-2xl font-semibold text-center mb-8 gradient-text">Certificates</h3>
+            
+            <div className="space-y-6">
+              {/* HackerRank Certificate */}
+              <div className="glass-effect rounded-lg p-8">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                  <div className="flex items-start gap-4 flex-1">
+                    <span className="text-4xl">🏆</span>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-yellow-400 mb-2">HackerRank Software Engineer Skill Certificate</h4>
+                      <p className="text-lg text-gray-300 mb-3">HackerRank</p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {["Problem Solving", "SQL", "REST API"].map((skill) => (
+                          <span key={skill} className="skill-badge badge-yellow text-xs">{skill}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://www.hackerrank.com/certificates/iframe/4aa7fe4d61dc" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-yellow-400 hover:text-yellow-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Certificate
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* Certificates */}
-            <div>
-              <h3 className="text-2xl font-bold mb-8 flex items-center gap-2" style={{ fontFamily: 'var(--font-manrope)' }}>
-                <Award className="h-6 w-6 text-primary" />
-                Certificates
-              </h3>
-              <div className="space-y-6">
-                <CertificateCard
-                  title="HackerRank Software Engineer Skill Certificate"
-                  issuer="HackerRank"
-                  skills={["Problem Solving", "SQL", "REST API"]}
-                  certificateUrl="https://www.hackerrank.com/certificates/iframe/4aa7fe4d61dc"
-                  icon={<Code2 className="h-6 w-6 text-primary" />}
-                />
-                <CertificateCard
-                  title="CodeChef Frontend Certificate"
-                  issuer="CodeChef"
-                  skills={["HTML", "CSS", "JavaScript"]}
-                  certificateUrl="https://www.codechef.com/certificates/preview/e95b3c5"
-                  icon={<Award className="h-6 w-6 text-primary" />}
-                />
+              {/* CodeChef Certificate */}
+              <div className="glass-effect rounded-lg p-8">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                  <div className="flex items-start gap-4 flex-1">
+                    <span className="text-4xl">🥇</span>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-cyan-400 mb-2">CodeChef Frontend Certificate</h4>
+                      <p className="text-lg text-gray-300 mb-3">CodeChef</p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {["HTML", "CSS", "JavaScript"].map((skill) => (
+                          <span key={skill} className="skill-badge badge-cyan text-xs">{skill}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://www.codechef.com/certificates/preview/e95b3c5" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Certificate
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
+        </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black" style={{ fontFamily: 'var(--font-manrope)' }}>
-            Let's Connect
-          </h2>
-          <p className="text-xl mb-12 text-gray-600">
-            Ready to collaborate on your next project? Let's build something amazing together!
+      {/* ================= CONTACT ================= */}
+      <section id="contact" className="py-20 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title">Let's Connect</h2>
+        
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg text-gray-300 text-center mb-12 leading-relaxed">
+            Ready to collaborate on your next project? Let's discuss how we can build something amazing together.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <ContactCard
-              icon={Mail}
-              title="Email"
-              subtitle="pavanchinchalpet@gmail.com"
-              href="mailto:pavanchinchalpet@gmail.com"
-            />
-            <ContactCard
-              icon={Phone}
-              title="Phone"
-              subtitle="+91 7032832362"
-              href="tel:+917032832362"
-            />
-            <ContactCard
-              icon={Github}
-              title="GitHub"
-              subtitle="github.com/pavanchinchalpet"
-              href="https://github.com/pavanchinchalpet"
-              isExternal={true}
-            />
-            <ContactCard
-              icon={Linkedin}
-              title="LinkedIn"
-              subtitle="Linkedin.com/in/pavanchinchalpet"
-              href="https://linkedin.com/in/pavanchinchalpet"
-              isExternal={true}
-            />
+          
+          <div className="grid sm:grid-cols-2 gap-6">
+            
+            {/* Email Contact */}
+            <div className="glass-effect rounded-lg p-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-500/20 rounded-lg">
+                  <Mail className="h-6 w-6 text-blue-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-blue-400 mb-2">Email</h3>
+                  <p className="text-gray-300 mb-4">Drop me a line anytime</p>
+                  <a 
+                    href="mailto:pavanchinchalpet@gmail.com"
+                    className="text-gray-400 hover:text-blue-400 transition-colors break-all"
+                  >
+                    pavanchinchalpet@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Phone Contact */}
+            <div className="glass-effect rounded-lg p-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-green-500/20 rounded-lg">
+                  <Phone className="h-6 w-6 text-green-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-green-400 mb-2">Phone</h3>
+                  <p className="text-gray-300 mb-4">Call me for quick discussions</p>
+                  <a 
+                    href="tel:+917032832362"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    +91 7032832362
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* GitHub */}
+            <div className="glass-effect rounded-lg p-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-purple-500/20 rounded-lg">
+                  <Github className="h-6 w-6 text-purple-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-purple-400 mb-2">GitHub</h3>
+                  <p className="text-gray-300 mb-4">Check out my code repositories</p>
+                  <a 
+                    href="https://github.com/pavanchinchalpet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-1"
+                  >
+                    github.com/pavanchinchalpet
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* LinkedIn */}
+            <div className="glass-effect rounded-lg p-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-cyan-500/20 rounded-lg">
+                  <Linkedin className="h-6 w-6 text-cyan-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">LinkedIn</h3>
+                  <p className="text-gray-300 mb-4">Let's connect professionally</p>
+                  <a 
+                    href="https://linkedin.com/in/pavanchinchalpet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-1"
+                  >
+                    linkedin.com/in/pavanchinchalpet
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-            <a 
-              href="mailto:pavanchinchalpet@gmail.com"
-              className="btn btn-lg btn-secondary font-semibold"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Send Email
-            </a>
-            <a 
-              href="https://github.com/pavanchinchalpet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-lg btn-outline font-semibold"
-            >
-              <Github className="mr-2 h-5 w-5" />
-              View GitHub
-            </a>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <div className="glass-effect rounded-lg p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-semibold gradient-text mb-4">Ready to Start a Project?</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                I'm always excited to work on innovative projects and collaborate with talented teams. 
+                Whether you need a full-stack developer, technical consultant, or someone to bring your ideas to life, let's talk!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="mailto:pavanchinchalpet@gmail.com"
+                  className="btn btn-secondary"
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  Send Email
+                </a>
+                <a 
+                  href="/pavan-chinchalpet.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline"
+                >
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  Download Resume
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 text-center">
-        <p className="text-sm text-muted-foreground">
-          © 2025 Pavan Kumar Chinchalpet. Built with Next.js and Clean CSS.
-        </p>
+      <footer className="py-8 text-center border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <p className="text-gray-400 mb-4">
+            Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+          </p>
+          <p className="text-sm text-gray-500">
+            © 2025 Pavan Kumar Chinchalpet. All rights reserved.
+          </p>
+        </div>
       </footer>
     </div>
-  )
+  );
 }
