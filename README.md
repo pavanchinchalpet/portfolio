@@ -21,7 +21,7 @@ A high-performance, responsive portfolio website built with Next.js and TypeScri
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://pavanchinchalpet.github.io/Portfolio/](https://pavanchinchalpet.github.io/Portfolio/)
+Visit the live portfolio: [https://pavanchinchalpet.github.io/Portfolio/](https://portfolio-pavanchinchalpet.vercel.app)
 
 ## 🛠️ Tech Stack
 
