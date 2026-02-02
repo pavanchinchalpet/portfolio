@@ -16,38 +16,38 @@ export default function Portfolio() {
       {/* ================= HERO SECTION ================= */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center px-4 md:px-8"
+        className="relative min-h-screen flex items-center px-4 sm:px-6 md:px-8 py-12 sm:py-16"
       >
-        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* LEFT CONTENT */}
-          <div className="space-y-6">
-            <p className="text-sm md:text-base text-blue-400 font-medium">
+          <div className="space-y-4 sm:space-y-5 lg:space-y-6 text-center lg:text-left">
+            <p className="text-sm sm:text-base text-blue-400 font-medium">
               Hi, I'm Pavan Kumar Chinchalpet
             </p>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold leading-snug tracking-tight gradient-text max-w-xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[46px] font-semibold leading-tight sm:leading-snug tracking-tight gradient-text max-w-xl mx-auto lg:mx-0">
               Full-Stack Developer building high-performance, scalable web applications
             </h1>
 
-            <p className="text-base md:text-lg text-gray-300 max-w-lg">
+            <p className="text-base sm:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0">
               Architecting enterprise-grade systems with optimized APIs, scalable architecture, and production-ready deployments.
             </p>
 
             {/* BADGES */}
-            <div className="flex flex-wrap gap-2">
-              <span className="skill-badge badge-blue">🚀 500+ Users</span>
-              <span className="skill-badge badge-green">⚡ 3.7s → 0.5s</span>
-              <span className="skill-badge badge-purple">📊 70% Load Reduction</span>
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              <span className="skill-badge badge-blue text-xs sm:text-sm">🚀 500+ Users</span>
+              <span className="skill-badge badge-green text-xs sm:text-sm">⚡ 3.7s → 0.5s</span>
+              <span className="skill-badge badge-purple text-xs sm:text-sm">📊 70% Load Reduction</span>
             </div>
 
             {/* CTA */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2 justify-center lg:justify-start">
               <a href="#projects" className="btn btn-secondary">
                 <ExternalLink className="h-4 w-4 mr-2" />
                 View Projects
               </a>
               <a
-                href="/pavan-chinchalpet.pdf"
+                href="/images/pavan-chinchalpet.pdf"
                 target="_blank"
                 className="btn btn-outline"
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function Portfolio() {
             </div>
 
             {/* STATS */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 max-w-xl">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 max-w-xl mx-auto lg:mx-0">
               {[
                 ["500+", "Users"],
                 ["70%", "Load Reduced"],
@@ -74,9 +74,9 @@ export default function Portfolio() {
               ].map(([value, label]) => (
                 <div
                   key={label}
-                  className="glass-effect rounded-lg p-3 text-center"
+                  className="glass-effect rounded-lg p-2 sm:p-3 text-center"
                 >
-                  <div className="text-lg font-semibold text-blue-400">{value}</div>
+                  <div className="text-base sm:text-lg font-semibold text-blue-400">{value}</div>
                   <div className="text-xs text-gray-400">{label}</div>
                 </div>
               ))}
@@ -84,8 +84,8 @@ export default function Portfolio() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-[260px] sm:w-[300px] md:w-[340px]">
+          <div className="flex justify-center lg:justify-end order-first lg:order-last">
+            <div className="relative w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[340px]">
               <img
                 src="/images/passport size photo.jpg"
                 alt="Pavan Kumar"
@@ -564,20 +564,20 @@ I’m passionate about writing maintainable code, designing efficient data flows
             Ready to collaborate on your next project? Let's discuss how we can build something amazing together.
           </p>
           
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
             
             {/* Email Contact */}
-            <div className="glass-effect rounded-lg p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-500/20 rounded-lg">
-                  <Mail className="h-6 w-6 text-blue-400" />
+            <div className="glass-effect rounded-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="p-2 sm:p-3 bg-blue-500/20 rounded-lg flex-shrink-0">
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-blue-400" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-blue-400 mb-2">Email</h3>
-                  <p className="text-gray-300 mb-4">Drop me a line anytime</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-semibold text-blue-400 mb-2">Email</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Drop me a line anytime</p>
                   <a 
                     href="mailto:pavanchinchalpet@gmail.com"
-                    className="text-gray-400 hover:text-blue-400 transition-colors break-all"
+                    className="text-sm sm:text-base text-gray-400 hover:text-blue-400 transition-colors break-all"
                   >
                     pavanchinchalpet@gmail.com
                   </a>
@@ -586,17 +586,17 @@ I’m passionate about writing maintainable code, designing efficient data flows
             </div>
 
             {/* Phone Contact */}
-            <div className="glass-effect rounded-lg p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-500/20 rounded-lg">
-                  <Phone className="h-6 w-6 text-green-400" />
+            <div className="glass-effect rounded-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="p-2 sm:p-3 bg-green-500/20 rounded-lg flex-shrink-0">
+                  <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-green-400" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-green-400 mb-2">Phone</h3>
-                  <p className="text-gray-300 mb-4">Call me for quick discussions</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-semibold text-green-400 mb-2">Phone</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Call me for quick discussions</p>
                   <a 
                     href="tel:+917032832362"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-sm sm:text-base text-gray-400 hover:text-green-400 transition-colors"
                   >
                     +91 7032832362
                   </a>
@@ -605,44 +605,44 @@ I’m passionate about writing maintainable code, designing efficient data flows
             </div>
 
             {/* GitHub */}
-            <div className="glass-effect rounded-lg p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-purple-500/20 rounded-lg">
-                  <Github className="h-6 w-6 text-purple-400" />
+            <div className="glass-effect rounded-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="p-2 sm:p-3 bg-purple-500/20 rounded-lg flex-shrink-0">
+                  <Github className="h-5 w-5 sm:h-6 sm:w-6 text-purple-400" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-400 mb-2">GitHub</h3>
-                  <p className="text-gray-300 mb-4">Check out my code repositories</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-semibold text-purple-400 mb-2">GitHub</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Check out my code repositories</p>
                   <a 
                     href="https://github.com/pavanchinchalpet"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-1"
+                    className="text-sm sm:text-base text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-1 break-all"
                   >
-                    github.com/pavanchinchalpet
-                    <ExternalLink className="h-4 w-4" />
+                    <span className="truncate">github.com/pavanchinchalpet</span>
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* LinkedIn */}
-            <div className="glass-effect rounded-lg p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-cyan-500/20 rounded-lg">
-                  <Linkedin className="h-6 w-6 text-cyan-400" />
+            <div className="glass-effect rounded-lg p-4 sm:p-6 lg:p-8">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="p-2 sm:p-3 bg-cyan-500/20 rounded-lg flex-shrink-0">
+                  <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-400" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">LinkedIn</h3>
-                  <p className="text-gray-300 mb-4">Let's connect professionally</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2">LinkedIn</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Let's connect professionally</p>
                   <a 
                     href="https://linkedin.com/in/pavanchinchalpet"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-1"
+                    className="text-sm sm:text-base text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-1 break-all"
                   >
-                    linkedin.com/in/pavanchinchalpet
-                    <ExternalLink className="h-4 w-4" />
+                    <span className="truncate">linkedin.com/in/pavanchinchalpet</span>
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   </a>
                 </div>
               </div>
@@ -651,14 +651,14 @@ I’m passionate about writing maintainable code, designing efficient data flows
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-12">
-            <div className="glass-effect rounded-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-semibold gradient-text mb-4">Ready to Start a Project?</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+          <div className="text-center mt-8 sm:mt-12">
+            <div className="glass-effect rounded-lg p-6 sm:p-8 max-w-2xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-semibold gradient-text mb-3 sm:mb-4">Ready to Start a Project?</h3>
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 I'm always excited to work on innovative projects and collaborate with talented teams. 
                 Whether you need a full-stack developer, technical consultant, or someone to bring your ideas to life, let's talk!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <a 
                   href="mailto:pavanchinchalpet@gmail.com"
                   className="btn btn-secondary"
@@ -667,7 +667,7 @@ I’m passionate about writing maintainable code, designing efficient data flows
                   Send Email
                 </a>
                 <a 
-                  href="/pavan-chinchalpet.pdf"
+                  href="/images/pavan-chinchalpet.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
@@ -682,12 +682,12 @@ I’m passionate about writing maintainable code, designing efficient data flows
         </div>
       </section>
 
-      <footer className="py-8 text-center border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <p className="text-gray-400 mb-4">
+      <footer className="py-6 sm:py-8 text-center border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
             Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-xs sm:text-sm text-gray-500">
             © 2025 Pavan Kumar Chinchalpet. All rights reserved.
           </p>
         </div>

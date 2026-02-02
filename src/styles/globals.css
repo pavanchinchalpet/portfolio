@@ -262,11 +262,66 @@
   }
   
   .btn {
-    @apply w-full px-4 py-3 text-sm;
+    @apply w-full sm:w-auto px-4 py-3 text-sm;
   }
   
   .btn-lg {
     @apply px-6 py-4 text-base;
+  }
+
+  /* Mobile hero section adjustments */
+  #home {
+    @apply py-8;
+  }
+
+  /* Mobile section spacing */
+  section {
+    @apply py-12;
+  }
+
+  /* Mobile glass effect padding */
+  .glass-effect {
+    @apply p-4;
+  }
+
+  /* Mobile stats grid */
+  .grid.grid-cols-2.sm\:grid-cols-4 {
+    @apply gap-2;
+  }
+
+  /* Mobile contact cards */
+  .grid.sm\:grid-cols-2 {
+    @apply gap-4;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn {
+    @apply px-6 py-3;
+  }
+
+  /* Tablet section spacing */
+  section {
+    @apply py-16;
+  }
+
+  /* Tablet glass effect */
+  .glass-effect {
+    @apply p-6;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1024px) {
+  /* Desktop section spacing */
+  section {
+    @apply py-20;
+  }
+
+  /* Desktop glass effect */
+  .glass-effect {
+    @apply p-8;
   }
 }
 /* Section Title Utility */
