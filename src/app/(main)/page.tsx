@@ -132,11 +132,11 @@ I’m passionate about writing maintainable code, designing efficient data flows
           <h3 className="text-2xl font-semibold text-center mb-12 gradient-text">Technical Skills</h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Languages */}
+            {/* Programming Languages */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">🌐 Languages</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">🌐 Programming Languages</h4>
               <div className="flex flex-wrap gap-2">
-                {["JavaScript", "TypeScript", "Python", "Java"].map((skill) => (
+                {["JavaScript (ES6+)", "TypeScript", "Java", "Python"].map((skill) => (
                   <span key={skill} className="skill-badge badge-blue">{skill}</span>
                 ))}
               </div>
@@ -144,9 +144,9 @@ I’m passionate about writing maintainable code, designing efficient data flows
 
             {/* Frontend */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-green-400">🎨 Frontend</h4>
+              <h4 className="text-lg font-semibold mb-4 text-green-400">🎨 Frontend Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "React.js", "Next.js"].map((skill) => (
+                {["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "React.js", "Next.js"].map((skill) => (
                   <span key={skill} className="skill-badge badge-green">{skill}</span>
                 ))}
               </div>
@@ -154,9 +154,19 @@ I’m passionate about writing maintainable code, designing efficient data flows
 
             {/* Backend */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">⚙️ Backend</h4>
+              <h4 className="text-lg font-semibold mb-4 text-purple-400">⚙️ Backend Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "Nest.js"].map((skill) => (
+                {["Node.js", "Express.js", "NestJS", "Spring Boot"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-purple">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* APIs & Communication */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-indigo-400">🔌 APIs & Communication</h4>
+              <div className="flex flex-wrap gap-2">
+                {["RESTful APIs", "GraphQL", "WebSockets", "API Integration"].map((skill) => (
                   <span key={skill} className="skill-badge badge-purple">{skill}</span>
                 ))}
               </div>
@@ -164,29 +174,49 @@ I’m passionate about writing maintainable code, designing efficient data flows
 
             {/* Database */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-yellow-400">🗄️ Database</h4>
+              <h4 className="text-lg font-semibold mb-4 text-yellow-400">🗄️ Databases</h4>
               <div className="flex flex-wrap gap-2">
-                {["NoSQL", "SQL", "PostgreSQL", "MongoDB", "SupabaseDB", "NeonDB"].map((skill) => (
+                {["PostgreSQL", "MongoDB", "SQL", "NoSQL", "Supabase", "Neon"].map((skill) => (
                   <span key={skill} className="skill-badge badge-yellow">{skill}</span>
                 ))}
               </div>
             </div>
 
-            {/* Tools & Platforms */}
+            {/* ORM & Caching */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-cyan-400">🛠️ Tools & Platforms</h4>
+              <h4 className="text-lg font-semibold mb-4 text-amber-400">📦 ORM & Caching</h4>
               <div className="flex flex-wrap gap-2">
-                {["Git", "GitHub", "Postman", "npm", "VS Code", "Vercel", "Render"].map((skill) => (
+                {["Prisma ORM", "Mongoose", "Hibernate", "JDBC", "Redis"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-yellow">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Auth & Architecture */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-red-400">🔐 Auth & Architecture</h4>
+              <div className="flex flex-wrap gap-2">
+                {["JWT", "RBAC", "MVC", "Microservices"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-red">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* DevOps & Tools */}
+            <div className="glass-effect rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4 text-cyan-400">🛠️ DevOps & Tools</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Git", "GitHub", "Postman", "npm", "VS Code", "Vercel", "Render", "CI/CD"].map((skill) => (
                   <span key={skill} className="skill-badge badge-cyan">{skill}</span>
                 ))}
               </div>
             </div>
 
-            {/* Others */}
+            {/* Other Skills */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-red-400">🔐 Others</h4>
+              <h4 className="text-lg font-semibold mb-4 text-pink-400">✨ Other Skills</h4>
               <div className="flex flex-wrap gap-2">
-                {["JWT Authentication", "API Integration", "Responsive Design", "Deployment", "Debugging & Testing"].map((skill) => (
+                {["Responsive Design", "Debugging & Testing", "Performance Optimization"].map((skill) => (
                   <span key={skill} className="skill-badge badge-red">{skill}</span>
                 ))}
               </div>
@@ -321,40 +351,40 @@ I’m passionate about writing maintainable code, designing efficient data flows
         
         <div className="max-w-5xl mx-auto space-y-8">
           
-          {/* MERN Quest Project */}
+          {/* IoT Asset Dashboard Project */}
           <div className="glass-effect rounded-lg p-8">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
               <div className="flex items-start gap-4 flex-1">
-                <span className="text-4xl">🎓</span>
+                <span className="text-4xl">⚙️</span>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-blue-400 mb-2">MERN Quest</h3>
-                  <p className="text-lg text-gray-300 mb-3">Full-Stack Learning Platform</p>
-                  <p className="text-gray-400 mb-4">Learning platform with quizzes, JWT auth, and analytics.</p>
+                  <h3 className="text-2xl font-bold text-purple-400 mb-2">IoT Asset Dashboard</h3>
+                  <p className="text-lg text-gray-300 mb-3">Full-Stack IoT Platform</p>
+                  <p className="text-gray-400 mb-4">Real-time IoT monitoring with WebSockets.</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {["React", "Node", "MongoDB", "Supabase"].map((tech) => (
-                      <span key={tech} className="skill-badge badge-blue text-xs">{tech}</span>
+                    {["Next.js", "Socket.io", "PostgreSQL"].map((tech) => (
+                      <span key={tech} className="skill-badge badge-purple text-xs">{tech}</span>
                     ))}
                   </div>
                 </div>
               </div>
               <a 
-                href="https://learn-mern-pied.vercel.app/" 
+                href="https://iot-asset.vercel.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+                className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
               >
                 <ExternalLink className="h-4 w-4" />
                 Live Demo
               </a>
             </div>
             
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="border-l-4 border-purple-400 pl-6">
               <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
               <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
-                <li>• Interactive quiz system with real-time scoring</li>
-                <li>• JWT authentication and user management</li>
-                <li>• Analytics dashboard for progress tracking</li>
+                <li>• Real-time device monitoring</li>
+                <li>• WebSocket communication</li>
+                <li>• Interactive data visualization</li>
               </ul>
             </div>
           </div>
@@ -397,40 +427,40 @@ I’m passionate about writing maintainable code, designing efficient data flows
             </div>
           </div>
 
-          {/* IoT Asset Dashboard Project */}
+          {/* MERN Quest Project */}
           <div className="glass-effect rounded-lg p-8">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
               <div className="flex items-start gap-4 flex-1">
-                <span className="text-4xl">⚙️</span>
+                <span className="text-4xl">🎓</span>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-purple-400 mb-2">IoT Asset Dashboard</h3>
-                  <p className="text-lg text-gray-300 mb-3">Full-Stack IoT Platform</p>
-                  <p className="text-gray-400 mb-4">Real-time IoT monitoring with WebSockets.</p>
+                  <h3 className="text-2xl font-bold text-blue-400 mb-2">MERN Quest</h3>
+                  <p className="text-lg text-gray-300 mb-3">Full-Stack Learning Platform</p>
+                  <p className="text-gray-400 mb-4">Learning platform with quizzes, JWT auth, and analytics.</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {["Next.js", "Socket.io", "PostgreSQL"].map((tech) => (
-                      <span key={tech} className="skill-badge badge-purple text-xs">{tech}</span>
+                    {["React", "Node", "MongoDB", "Supabase"].map((tech) => (
+                      <span key={tech} className="skill-badge badge-blue text-xs">{tech}</span>
                     ))}
                   </div>
                 </div>
               </div>
               <a 
-                href="https://iot-asset.vercel.app" 
+                href="https://learn-mern-pied.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
+                className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 mt-4 lg:mt-0"
               >
                 <ExternalLink className="h-4 w-4" />
                 Live Demo
               </a>
             </div>
             
-            <div className="border-l-4 border-purple-400 pl-6">
+            <div className="border-l-4 border-blue-400 pl-6">
               <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
               <ul className="text-gray-300 space-y-2 text-sm leading-relaxed">
-                <li>• Real-time device monitoring</li>
-                <li>• WebSocket communication</li>
-                <li>• Interactive data visualization</li>
+                <li>• Interactive quiz system with real-time scoring</li>
+                <li>• JWT authentication and user management</li>
+                <li>• Analytics dashboard for progress tracking</li>
               </ul>
             </div>
           </div>
