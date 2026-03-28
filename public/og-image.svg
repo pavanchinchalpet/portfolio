@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#08111F"/>
+  <circle cx="146" cy="122" r="220" fill="#1D4ED8" fill-opacity="0.16"/>
+  <circle cx="1070" cy="498" r="260" fill="#7C3AED" fill-opacity="0.18"/>
+  <circle cx="830" cy="130" r="180" fill="#06B6D4" fill-opacity="0.14"/>
+  <rect x="78" y="70" width="1044" height="490" rx="36" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+  <rect x="116" y="115" width="132" height="132" rx="32" fill="url(#paint0_linear)"/>
+  <path d="M154 210V148H187.5C204.674 148 215.5 156.452 215.5 169.75C215.5 183.048 204.674 191.5 187.5 191.5H171V210H154ZM171 179H184.5C193.728 179 197.5 175.349 197.5 169.75C197.5 164.151 193.728 160.5 184.5 160.5H171V179Z" fill="white"/>
+  <path d="M194 210L218.5 148H235.5L211 210H194Z" fill="#BAE6FD"/>
+  <text x="289" y="193" fill="white" font-size="58" font-family="Inter, Arial, sans-serif" font-weight="700">
+    Pavan Kumar Chinchalpet
+  </text>
+  <text x="289" y="257" fill="#7DD3FC" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="600">
+    Full-Stack Developer
+  </text>
+  <text x="116" y="356" fill="#E2E8F0" font-size="28" font-family="Inter, Arial, sans-serif">
+    Building scalable web apps with Next.js, React, Node.js,
+  </text>
+  <text x="116" y="398" fill="#E2E8F0" font-size="28" font-family="Inter, Arial, sans-serif">
+    TypeScript, PostgreSQL, and performance-focused architecture.
+  </text>
+  <text x="116" y="487" fill="#93C5FD" font-size="24" font-family="Inter, Arial, sans-serif">
+    pavanchinchalpet.dev
+  </text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="128" y1="124" x2="238" y2="243" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="0.55" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

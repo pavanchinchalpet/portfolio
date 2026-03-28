@@ -7,12 +7,68 @@ import {
   ExternalLink,
   BookOpen,
 } from "lucide-react";
-import ContactCard from "../../components/ContactCard";
-import ProjectCard from "../../components/ProjectCard";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Pavan Kumar Chinchalpet",
+  jobTitle: "Full-Stack Developer",
+  description:
+    "Full-stack developer building scalable web applications with Next.js, React, Node.js, TypeScript, PostgreSQL, and modern cloud tooling.",
+  image: "/images/passport size photo.jpg",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
+  email: "mailto:pavanchinchalpet@gmail.com",
+  telephone: "+91 7032832362",
+  sameAs: [
+    "https://github.com/pavanchinchalpet",
+    "https://linkedin.com/in/pavanchinchalpet",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Hyderabad",
+    addressRegion: "Telangana",
+    addressCountry: "India",
+  },
+};
+
+function PortfolioLogo() {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-violet-500 to-cyan-400 shadow-lg shadow-blue-500/20 ring-1 ring-white/15">
+        <span className="text-lg font-extrabold tracking-tight text-white">PC</span>
+      </div>
+      <div>
+        <p className="text-sm font-semibold tracking-[0.24em] text-blue-300">PORTFOLIO</p>
+        <p className="text-sm text-white/90 sm:text-base">Pavan Kumar Chinchalpet</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/65 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 md:px-8">
+          <a href="#home" aria-label="Go to the homepage hero section">
+            <PortfolioLogo />
+          </a>
+          <nav aria-label="Primary" className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+            <a href="#about" className="transition-colors hover:text-blue-300">About</a>
+            <a href="#experience" className="transition-colors hover:text-blue-300">Experience</a>
+            <a href="#projects" className="transition-colors hover:text-blue-300">Projects</a>
+            <a href="#contact" className="transition-colors hover:text-blue-300">Contact</a>
+          </nav>
+        </div>
+      </header>
+
       {/* ================= HERO SECTION ================= */}
       <section
         id="home"
@@ -47,7 +103,7 @@ export default function Portfolio() {
                 View Projects
               </a>
               <a
-                href="/images/pavan-chinchalpet.pdf"
+                href="/images/Pavan-Chinchalpet_Full_Stack_Developer.pdf"
                 target="_blank"
                 className="btn btn-outline"
                 rel="noopener noreferrer"
@@ -70,7 +126,7 @@ export default function Portfolio() {
                 ["500+", "Users"],
                 ["70%", "Load Reduced"],
                 ["0.5s", "API Time"],
-                ["1+", "Years"],
+                ["2+", "Years"],
               ].map(([value, label]) => (
                 <div
                   key={label}
@@ -134,90 +190,90 @@ I’m passionate about writing maintainable code, designing efficient data flows
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Programming Languages */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">🌐 Programming Languages</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Programming Languages</h4>
               <div className="flex flex-wrap gap-2">
-                {["JavaScript (ES6+)", "TypeScript", "Java", "Python"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-blue">{skill}</span>
+                {["JavaScript (ES6+)", "TypeScript", "Python"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* Frontend */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-green-400">🎨 Frontend Technologies</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Frontend Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "React.js", "Next.js"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-green">{skill}</span>
+                {["HTML5", "CSS3", "Tailwind CSS", "React.js", "Next.js"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* Backend */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">⚙️ Backend Technologies</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Backend Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "NestJS", "Spring Boot"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-purple">{skill}</span>
+                {["Node.js", "Express.js", "NestJS"].map((skill) => (
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* APIs & Communication */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-indigo-400">🔌 APIs & Communication</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">APIs and Communication</h4>
               <div className="flex flex-wrap gap-2">
                 {["RESTful APIs", "GraphQL", "WebSockets", "API Integration"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-purple">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* Database */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-yellow-400">🗄️ Databases</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Databases</h4>
               <div className="flex flex-wrap gap-2">
                 {["PostgreSQL", "MongoDB", "SQL", "NoSQL", "Supabase", "Neon"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-yellow">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* ORM & Caching */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-amber-400">📦 ORM & Caching</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">ORM and Caching</h4>
               <div className="flex flex-wrap gap-2">
                 {["Prisma ORM", "Mongoose", "Hibernate", "JDBC", "Redis"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-yellow">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* Auth & Architecture */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-red-400">🔐 Auth & Architecture</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Auth and Architecture</h4>
               <div className="flex flex-wrap gap-2">
                 {["JWT", "RBAC", "MVC", "Microservices"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-red">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* DevOps & Tools */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-cyan-400">🛠️ DevOps & Tools</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">DevOps and Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Git", "GitHub", "Postman", "npm", "VS Code", "Vercel", "Render", "CI/CD"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-cyan">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
 
             {/* Other Skills */}
             <div className="glass-effect rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4 text-pink-400">✨ Other Skills</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-300">Other Skills</h4>
               <div className="flex flex-wrap gap-2">
                 {["Responsive Design", "Debugging & Testing", "Performance Optimization"].map((skill) => (
-                  <span key={skill} className="skill-badge badge-red">{skill}</span>
+                  <span key={skill} className="skill-badge badge-dark">{skill}</span>
                 ))}
               </div>
             </div>
@@ -697,7 +753,7 @@ I’m passionate about writing maintainable code, designing efficient data flows
                   Send Email
                 </a>
                 <a 
-                  href="/images/pavan-chinchalpet.pdf"
+                  href="/images/Pavan-Chinchalpet_Full_Stack_Developer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
