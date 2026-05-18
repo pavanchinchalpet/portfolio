@@ -103,7 +103,7 @@ export default function Portfolio() {
                 View Projects
               </a>
               <a
-                href="/images/Pavan-Chinchalpet_Full_Stack_Developer.pdf"
+                href="/images/pavan_chinchalpet_resume.pdf"
                 target="_blank"
                 className="btn btn-outline"
                 rel="noopener noreferrer"
@@ -126,7 +126,7 @@ export default function Portfolio() {
                 ["500+", "Users"],
                 ["70%", "Load Reduced"],
                 ["0.5s", "API Time"],
-                ["2+", "Years"],
+                ["1+", "Years"],
               ].map(([value, label]) => (
                 <div
                   key={label}
@@ -753,7 +753,7 @@ I’m passionate about writing maintainable code, designing efficient data flows
                   Send Email
                 </a>
                 <a 
-                  href="/images/Pavan-Chinchalpet_Full_Stack_Developer.pdf"
+                  href="/images/pavan_chinchalpet_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
